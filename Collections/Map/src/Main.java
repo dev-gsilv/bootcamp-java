@@ -1,7 +1,6 @@
 public class Main {
     public static void main(String[] args) {
-        Dicionario dicionario = new Dicionario();
-
+        /* Dicionario dicionario = new Dicionario();
         dicionario.exibirPalavras();
         dicionario.pesquisarPorPalavra("Teste");
 
@@ -16,7 +15,22 @@ public class Main {
         dicionario.exibirPalavras();
 
         dicionario.pesquisarPorPalavra("Tinta");
-        dicionario.pesquisarPorPalavra("Teste");
+        dicionario.pesquisarPorPalavra("Teste");*/
+
+        ContagemPalavras palavras = new ContagemPalavras();
+        palavras.exibirContagemPalavras();
+
+        palavras.adicionarPalavra("Lorem", 3);
+        palavras.adicionarPalavra("Ipsum", 4);
+        palavras.adicionarPalavra("Dolor", 1);
+        palavras.adicionarPalavra("Siamet", 8);
+        palavras.exibirContagemPalavras();
+
+        palavras.removerPalavra("Dolor");
+        palavras.exibirContagemPalavras();
+
+        palavras.encontrarPalavraMaisFrequente();
+
 
     }
 }
