@@ -29,14 +29,18 @@ public class ContagemPalavras {
     }
 
     public void encontrarPalavraMaisFrequente(){
-        Map.Entry<String, Integer> palavraMaisFrequente = null;
+        Map<String, Integer> palavrasMaisFrequente = new HashMap<>();
         int maiorContagem = 0;
         for (Map.Entry<String, Integer> entry : contadorPalavras.entrySet()) {
-            if (entry.getValue() > maiorContagem) {
+            if (entry.getValue() >= maiorContagem) {
                 maiorContagem = entry.getValue();
-                palavraMaisFrequente = entry;
             }
         }
-        System.out.println("A palavra mais frequente é: "+palavraMaisFrequente);
+        for (Map.Entry<String, Integer> entry : contadorPalavras.entrySet()){
+            if(entry.getValue() == maiorContagem){
+                palavrasMaisFrequente.put(entry.getKey(), entry.getValue());
+            }
+        }
+        System.out.println("Palavra(s) mais frequente(s): "+palavrasMaisFrequente);
     }
 }

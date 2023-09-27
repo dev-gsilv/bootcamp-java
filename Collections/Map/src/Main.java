@@ -21,9 +21,12 @@ public class Main {
         palavras.exibirContagemPalavras();
 
         palavras.adicionarPalavra("Lorem", 3);
-        palavras.adicionarPalavra("Ipsum", 4);
-        palavras.adicionarPalavra("Dolor", 1);
-        palavras.adicionarPalavra("Siamet", 8);
+        palavras.adicionarPalavra("Ipsum", 8);
+        palavras.adicionarPalavra("Dolor", 6);
+        palavras.adicionarPalavra("sit", 9);
+        palavras.adicionarPalavra("amet", 3);
+        palavras.adicionarPalavra("elit", 4);
+        palavras.adicionarPalavra("sed", 6);
         palavras.exibirContagemPalavras();
 
         palavras.removerPalavra("Dolor");
