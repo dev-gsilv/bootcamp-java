@@ -7,7 +7,7 @@ public class OrdenarLista {
 
         List<Integer> numerosOrdenados = numeros.stream().sorted().toList();
 
-        // Imprime cada número numa linha separada. L12=lambda; L13=method reference.
+        // Imprime cada número numa linha separada. L11=lambda; L12=method reference.
         numerosOrdenados.forEach(e -> System.out.println(e));
         numerosOrdenados.forEach(System.out::println);
         // Imprime o array completo numa única linha.
