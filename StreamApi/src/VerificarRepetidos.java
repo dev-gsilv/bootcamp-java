@@ -8,9 +8,7 @@ public class VerificarRepetidos {
     }
 
     public static List<Integer> checarNumerosDistintos(List<Integer> lista){
-        Object[] listaOrdenada = lista.stream().sorted().toArray();
-        int valorMax = (Integer) listaOrdenada[listaOrdenada.length-1];
-        int[] contador = new int[valorMax+1];
+        int[] contador = new int[Collections.max(lista)+1];
         // LinkedHashMap<>() mantem os elemente na ordem de inserção. HashMap<>() ordena os elementos na ordem natural.
         Map<Integer, Integer> contagem = new LinkedHashMap<>();
         List<Integer> listaUnicos = new ArrayList<>();
