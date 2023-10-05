@@ -1,3 +1,5 @@
+package CofreSeguro;
+
 import java.util.Scanner;
 
 abstract class Cofre {
@@ -20,7 +22,7 @@ class CofreDigital extends Cofre {
     private int senha;
 
     public CofreDigital(int senha) {
-        super("Cofre Digital", "Senha");
+        super("CofreSeguro.Cofre Digital", "Senha");
         this.senha = senha;
     }
 
@@ -32,7 +34,7 @@ class CofreDigital extends Cofre {
 class CofreFisico extends Cofre {
 
     public CofreFisico() {
-        super("Cofre Fisico", "Chave");
+        super("CofreSeguro.Cofre Fisico", "Chave");
     }
 
 }
@@ -57,7 +59,7 @@ class Desafio {
             if (!cofreDigital.validarSenha(confirmacao)){
                 System.out.println("Senha incorreta!");
             } else {
-                System.out.println("Cofre aberto!");
+                System.out.println("CofreSeguro.Cofre aberto!");
             }
         } else {
             CofreFisico cofreFisico = new CofreFisico();
