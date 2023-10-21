@@ -35,25 +35,22 @@ classDiagram
     -BigDecimal number
     -BigDecimal limit
   }
+
   
-    class <<abstract>> BaseIten {
+  class BaseItem {
+    <<abstract>>
     -Long id    
     -String icon
     -String description
   }
-  
-  class Feature {
-  }
 
-  class News {
-  }
 
   User "1" *-- "1" Account
   User "1" *-- "1" Card
   User "1" *-- "N" Feature
   User "1" *-- "N" News
-  BaseIten --|> Feature
-  BaseIten --|> News
+  BaseItem <|-- Feature
+  BaseItem <|-- News
 ```
 
 ## Documentação da API (Swagger)
