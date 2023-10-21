@@ -14,39 +14,46 @@ RESTful API do Bootcamp Santander 2023 - trilha backend Java. Construída em Jav
 ```mermaid
 classDiagram
   class User {
+    -Long id
     -String name
     -Account account
-    -Feature[] features
     -Card card
+    -Feature[] features
     -News[] news
   }
 
   class Account {
+    -Long id
     -String number
     -String agency
-    -Number balance
-    -Number limit
-  }
-
-  class Feature {
-    -String icon
-    -String description
+    -BigDecimal balance
+    -BigDecimal limit
   }
 
   class Card {
-    -String number
-    -Number limit
+    -Long id
+    -BigDecimal number
+    -BigDecimal limit
   }
-
-  class News {
+  
+    class <<abstract>> BaseIten {
+    -Long id    
     -String icon
     -String description
   }
+  
+  class Feature {
+  }
+
+  class News {
+  }
 
   User "1" *-- "1" Account
-  User "1" *-- "N" Feature
   User "1" *-- "1" Card
+  User "1" *-- "N" Feature
   User "1" *-- "N" News
+  BaseIten --|> Feature
+  BaseIten --|> News
 ```
 
 ## Documentação da API (Swagger)
